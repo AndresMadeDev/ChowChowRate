@@ -18,6 +18,8 @@ class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var showError: Bool = false
+    @Published var showSuccess: Bool = false
+    @Published var successMessage: String = ""
     @Published var errorMessage: String = ""
     
     init() {
@@ -66,9 +68,9 @@ class AuthViewModel: ObservableObject {
     func resetPassword(email: String) async throws {
         do {
             try await Auth.auth().sendPasswordReset(withEmail: email)
-            print("EMAIL SENT TO \(email)")
+            successMessage = "Reset Password was sent to \(email)"
         } catch {
-            print("ERROR SENING RESET EMAIL")
+            errorMessage = "Error reseting password \(error.localizedDescription)"
         }
     }
     

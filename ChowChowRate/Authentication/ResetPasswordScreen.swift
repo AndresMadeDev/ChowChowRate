@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct ResetPasswordScreen: View {
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var email: String = ""
+    @State private var showAlert: Bool = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 50) {
             Text("Reset Password")
-            TextField("Email", text: $email)
+                .font(.title)
+                .bold()
+            
+            Text("Enter your email to receive an email to reset your password")
+            
+            InputView(text: $email,
+                      title: "Email Address",
+                      placeholder: "example@emaple.com")
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+            
             
             Button(action: {
                 Task {
                     try await viewModel.resetPassword(email: email)
+                    viewModel.showSuccess.toggle()
                 }
             }, label: {
                 HStack(spacing: 2) {
-                    Text("SIGN IN")
+                    Text("Reset Password")
                     Image(systemName: "arrow.right")
                 }
                 .foregroundStyle(.white)
@@ -33,7 +46,13 @@ struct ResetPasswordScreen: View {
                 .background(Color(.systemCyan))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             })
+            Spacer()
         }
+        .padding()
+        .alert(viewModel.successMessage, isPresented: $viewModel.showSuccess) {
+            Button("OK", role: .cancel) { dismiss() }
+        }
+        
     }
 }
 
