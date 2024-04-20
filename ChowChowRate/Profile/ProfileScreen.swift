@@ -20,7 +20,7 @@ struct ProfileScreen: View {
                         Text(user.username.prefix(1))
                             .padding()
                             .font(.system(.largeTitle, design: .rounded, weight: .bold))
-                            .background(.cyan.opacity(0.7))
+                            .background(.accent.opacity(0.7))
                             .foregroundStyle(.white)
                             .clipShape(.circle)
                         

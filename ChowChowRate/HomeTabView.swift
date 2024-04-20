@@ -10,8 +10,18 @@ import SwiftUI
 struct HomeTabView: View {
     var body: some View {
         TabView {
-            Text("Home")
-            Text("Favorite")
+            HomeListScreen()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            FavoriteScreen()
+                .tabItem {
+                    Label("Favorite", systemImage: "star")
+                }
+            ProfileScreen()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
         }
     }
 }

@@ -30,6 +30,9 @@
 		C1A912F32BCE124E00B70377 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912F02BCE124E00B70377 /* RegistrationScreen.swift */; };
 		C1A912F62BCE126900B70377 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912F42BCE126900B70377 /* ProfileScreen.swift */; };
 		C1A912F82BCF73D100B70377 /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912F72BCF73D100B70377 /* ResetPasswordScreen.swift */; };
+		C1A912FB2BD35B6E00B70377 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912FA2BD35B6E00B70377 /* HomeTabView.swift */; };
+		C1A912FD2BD368D800B70377 /* HomeListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912FC2BD368D800B70377 /* HomeListScreen.swift */; };
+		C1A912FF2BD368F000B70377 /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A912FE2BD368F000B70377 /* FavoriteScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		C1A912F02BCE124E00B70377 /* RegistrationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		C1A912F42BCE126900B70377 /* ProfileScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		C1A912F72BCF73D100B70377 /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
+		C1A912FA2BD35B6E00B70377 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		C1A912FC2BD368D800B70377 /* HomeListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListScreen.swift; sourceTree = "<group>"; };
+		C1A912FE2BD368F000B70377 /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,11 @@
 			children = (
 				C1A9129C2BCE066200B70377 /* ChowChowRateApp.swift */,
 				C1A9129E2BCE066200B70377 /* ContentView.swift */,
+				C1A912FA2BD35B6E00B70377 /* HomeTabView.swift */,
 				C1A912D92BCE103300B70377 /* Component */,
 				C1A912F12BCE124E00B70377 /* Authentication */,
+				C1A912F92BD35B2100B70377 /* Home */,
+				C1A913002BD368FF00B70377 /* Favorite */,
 				C1A912F52BCE126900B70377 /* Profile */,
 				C1A912E12BCE105000B70377 /* Models */,
 				C1A912ED2BCE121500B70377 /* ViewModel */,
@@ -156,6 +165,22 @@
 				C1A912F42BCE126900B70377 /* ProfileScreen.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		C1A912F92BD35B2100B70377 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C1A912FC2BD368D800B70377 /* HomeListScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C1A913002BD368FF00B70377 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				C1A912FE2BD368F000B70377 /* FavoriteScreen.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +269,7 @@
 				C1A912E42BCE105000B70377 /* Resturaunt.swift in Sources */,
 				C1A912E52BCE105000B70377 /* Review.swift in Sources */,
 				C1A912DB2BCE103400B70377 /* SettingRowView.swift in Sources */,
+				C1A912FD2BD368D800B70377 /* HomeListScreen.swift in Sources */,
 				C1A912F62BCE126900B70377 /* ProfileScreen.swift in Sources */,
 				C1A912DA2BCE103400B70377 /* InputView.swift in Sources */,
 				C1A9129F2BCE066200B70377 /* ContentView.swift in Sources */,
@@ -252,8 +278,10 @@
 				C1A912E32BCE105000B70377 /* Place.swift in Sources */,
 				C1A912F82BCF73D100B70377 /* ResetPasswordScreen.swift in Sources */,
 				C1A9129D2BCE066200B70377 /* ChowChowRateApp.swift in Sources */,
+				C1A912FB2BD35B6E00B70377 /* HomeTabView.swift in Sources */,
 				C1A912F22BCE124E00B70377 /* LoginScreen.swift in Sources */,
 				C1A912E22BCE105000B70377 /* Photo.swift in Sources */,
+				C1A912FF2BD368F000B70377 /* FavoriteScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
